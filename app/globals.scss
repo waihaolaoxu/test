@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 50px;
+  font-family: "Titillium Web", sans-serif;
+  background-color: #fafafa;
+}
+
+// 布局
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    margin: 0 15px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+// 文本方向
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tl {
+  text-align: left;
+}
+
+// 字号
+@for $i from 12 through 50 {
+  .f#{$i} {
+    font-size: $i + px;
+  }
+}
+
+// 间距
+@for $i from 5 through 50 {
+  .mt#{$i} {
+    margin-top: $i + px;
+  }
+
+  .ml#{$i} {
+    margin-left: $i + px;
+  }
+
+  .mb#{$i} {
+    margin-bottom: $i + px;
+  }
+
+  .mr#{$i} {
+    margin-right: $i + px;
+  }
+}
+
+// 其他
+.current {
+  cursor: pointer;
+}
+
+.block-tit {
+  padding-bottom: 10px;
+  color: #333;
+  margin: 70px 0 30px;
+  text-align: center;
+  font-size: 30px;
+
+  &::after {
+    content: "";
+    width: 2em;
+    height: 3px;
+    background-color: #409eff;
+    display: block;
+    margin: 2px auto 0;
+  }
+}
